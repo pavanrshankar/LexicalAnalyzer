@@ -160,7 +160,9 @@ Helpful features of our language (with examples in code):
                for dim in regression.hypothesis{
                   dim=1; //hypothesis initialized to 1 + x + x2
                }
-               regression.costFunction = sigma(i,1,3){ pow(regression.hypothesis[i]*regression.X[i]–regression.Y[i],2)};
+               regression.costFunction = sigma(i,1,3){ 
+                                             pow(regression.hypothesis[i]*regression.X[i]–regression.Y[i],2)
+                                          };
                untilConverge(regression.error = 0.1){
                   regression.trainModel("regressionTrainingData.txt");
                }
@@ -220,7 +222,7 @@ Helpful features of our language (with examples in code):
                   printf(“Class name: ”+class_names[0]);
                }
                else{
-               /* Custom confidence calculation by choosing the class which contains a point closest to data point */
+               /* Custom confidence calculation by choosing class which contains a point closest to data point */
                   knn.confidenceCalculation(vector data_point) = {
                      for point in knn.nearestNeighbours(new_point){
                         if(point[-1] in class_names){
