@@ -12,6 +12,7 @@ Steps to run the code:
 2. Run the lexer.py directly by opening file in Python 2.7
    or 
    Type the following code in python application:
+
       import lexer
       lexer.main()
 
