@@ -40,17 +40,12 @@ PROGRAMMING FEATURES OF LANGUAGE:
                                           classificationModel<KNN> knn;
                                           
 > Language also provides easy writability of code. E.g. array addition, subtraction and multiplication are simplified. 
+  File access for training and testing is made easy.
                                 
-                                  Arr1[] + Arr2[] adds all the elements at same index. 
-                                  
-  Easy file access is provided for training and testing like:
+                            Arr1[] + Arr2[] // adding all elements at same positions
 
                               vector<int> irisresults = classifyFromFile("iris.txt")
-                              
-> Language conforms to size of int as 4 bytes, size of double as 8 bytes as specified by IEEE. Implicit type conversion of 
-  int to double is allowed. Explicit type conversion of int to double and double to int allowed. Apart from this all other
-  type conversion is illegal.
-   
+
 HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
 
 >1. ARRAY OPERATIONS: Addition, subtraction, multiplication, increment, &, | etc. operations that are supported on integers 
@@ -65,7 +60,7 @@ HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
                               
 >2. MATHEMATICAL FUNCTIONS:
     
-    a. Sigma function: This is used for summation. Syntax:
+   a. Sigma function: This is used for summation. Syntax:
 
                            sigma(iterating variable, start value, end value){
                               //formula to be summed
