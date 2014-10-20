@@ -2,8 +2,7 @@ Application Domain:
 
 Our language is specific to Classification Algorithms. Classification is a major Machine Learning methodology that involves 
 learning from a given data and deriving some meaning from new data. The classification algorithms are not easy and intuitive 
-to implement. There are different ways in which every algorithm is modeled and different working paradigm behind each of those. 
-Providing a standard for writing such programs is crucial but at the same time customizability must be offered to the 
+to implement. There are different ways in which every algorithm is modeled and different working paradigm behind each of those. Providing a standard for writing such programs is crucial but at the same time customizability must be offered to the 
 machine learning researcher/programmer. We chose 4 popular classification algorithms Neural Networks, Naïve Bayes, 
 Linear regression with gradient descent and K Nearest neighbors and made a language that enables easy implementation 
 of these algorithms but at the same time allows low level modifications.
@@ -68,128 +67,140 @@ Helpful features of our language (with examples in code):
                               arr2[][] – arr1[][]; /* subtract elements of arr1 from arr2 at same index */
                               
 2. Mathematical functions:
-a. Sigma function
-This is used for summation. Syntax:
-sigma(iterating variable, start value, end value){
-//formula to be summed
-heights[iterating variable];
-}
-b. Sigmoid function
-This function accepts a variable and return sigmoidal value
-Example:
-vector<int> sigmoid_values;
-for i in range (1,10){
-sigmoid_values.insert(4*sigmoid(i) +1);
-}
-c. Exponent function
-Return e^argument. Example:
-printf(exp(10));
-3. Neural Networks
-i. Model attributes:
- Layers vector (add layer) – can be iterated using for (shown in example)
- Learning rate
- Input layer, Output layer
-ii. Layer attributes:
- Eg. Layers[layer name][node number]
- Node vector – can be iterated using for (shown in example)
- addNode, numNodes
- layerName - string
-iii. Node attributes:
- Weights- dictionary {<layer name, node number> : weight, <layer name, node number> : weight}
- Step function
- Threshold
-iv. TrainModel, TestModel, Classify
-Code:
-classificationModel<ANN> myNet;
-myNet.inputLayer=‟input‟;
-myNet.outputLayer=‟output‟;
-myNet.learningRate=0.4;
-myNet.layer[„input‟].addNodes(4); //adds 4 nodes to layer named input
-myNet.layer[„output‟].addNodes(1);
-myNet.layer[„hidden‟].addNodes(2);
-//layer[„foo‟] will create a new layer named foo if not present
-myNet.layer[„hidden‟][1].weights = { <‟input‟,1>: 0.5, <‟input‟,2>: 0.5 };
-myNet.layer[„hidden‟][2].weights = { <‟input‟,3>: 0.5, <‟input‟,4>: 0.5 };
-myNet.layer[„output‟][1].weights = { <‟hidden‟,1>: 0.5, <‟hidden‟,2>: 0.5 };
-for level in myNet.layer{
-for node in myNet.layer(level){
-myNet.layer[„hidden‟][i].stepFunction = „sigmoid‟;
-myNet.layer[„hidden‟][i].threshold = 0.46;
-}
-}
-myNet.trainModel(„neuralTrainingData.csv‟);
-testResults<ANN> annres= myNet.testModel(„neuralTestingData.csv‟);
-printf(„ANN model test results
-vector<int> sample = {3.5, 2.47452, 0.004112, 124}
-int result = myNet.classify(sample);
-vector<int> irisResults = myNet.classifyFromFile(„irisData.csv‟);
+   a. Sigma function: This is used for summation. Syntax:
+
+                           sigma(iterating variable, start value, end value){
+                              //formula to be summed
+                              heights[iterating variable];
+                           }
+                           
+   b. Sigmoid function: This function accepts a variable and return sigmoidal value
+      
+                           vector<int> sigmoid_values;
+                           for i in range (1,10){
+                              sigmoid_values.insert(4*sigmoid(i) +1);
+                           }
+                           
+   c. Exponent function: Return e^argument. Example:
+                           printf(exp(10));
+                           
+3. Neural Networks:
+   i. Model attributes:
+       Layers vector (add layer) – can be iterated using for (shown in example)
+       Learning rate
+       Input layer, Output layer
+
+   ii. Layer attributes:
+       Eg. Layers[layer name][node number]
+       Node vector – can be iterated using for (shown in example)
+       addNode, numNodes
+       layerName - string
+      
+   iii. Node attributes:   
+       Weights- dictionary {<layer name, node number> : weight, <layer name, node number> : weight}
+       Step function
+       Threshold
+      
+   iv. TrainModel, TestModel, Classify
+      Code:
+                           classificationModel<ANN> myNet;
+                           myNet.inputLayer=‟input‟;
+                           myNet.outputLayer=‟output‟;
+                           myNet.learningRate=0.4;
+                           myNet.layer['input'].addNodes(4); //adds 4 nodes to layer named input
+                           myNet.layer['output'].addNodes(1);
+                           myNet.layer['hidden'].addNodes(2);
+                           //layer['foo'] will create a new layer named foo if not present
+                           myNet.layer['hidden'][1].weights = { <‟input‟,1>: 0.5, <‟input‟,2>: 0.5 };
+                           myNet.layer['hidden'][2].weights = { <‟input‟,3>: 0.5, <‟input‟,4>: 0.5 };
+                           myNet.layer['output'][1].weights = { <‟hidden‟,1>: 0.5, <‟hidden‟,2>: 0.5 };
+                           
+                           for level in myNet.layer{
+                              for node in myNet.layer(level){
+                                 myNet.layer['hidden'][i].stepFunction = "sigmoid";
+                                 myNet.layer['hidden'][i].threshold = 0.46;
+                              }
+                           }
+                           
+                           myNet.trainModel("neuralTrainingData.csv");
+                           testResults<ANN> annres= myNet.testModel("neuralTestingData.csv");
+                           printf('ANN model test results')
+                           vector<int> sample = {3.5, 2.47452, 0.004112, 124}
+                           int result = myNet.classify(sample);
+                           vector<int> irisResults = myNet.classifyFromFile("irisData.csv");
+                           
 4. Regression using Gradient Descent
-i. Model attributes:
- Hypothesis coefficient vector
- Cost function, Error
- X and Y vectors – the input and target vectors
-Code:
-classificationModel<RGD> regression;
-regression.hypothesis.size = 3; // hypothesis of the form a0 + a1x + a2x2
-for dim in regression.hypothesis{
-dim=1; //hypothesis initialized to 1 + x + x2
-}
-regression.costFunction = sigma(i,1,3){ pow(regression.hypothesis[i] * regression.X[i] – regression.Y[i],2) };
-untilConverge(regression.error = 0.1){
-regression.trainModel(„regressionTrainingData.txt‟);
-}
-testResults<RGD> testing= regression.testModel(„regressionTestingData.txt);
-print(testing);
-vector<double> result = regression.classifyFromFile(„propertyValues.csv‟);
-printf(„Property Value results:\n‟ + result);
+   i. Model attributes:
+       Hypothesis coefficient vector
+       Cost function, Error
+       X and Y vectors – the input and target vectors
+      Code:
+               classificationModel<RGD> regression;
+               regression.hypothesis.size = 3; // hypothesis of the form a0 + a1x + a2x2
+               for dim in regression.hypothesis{
+                  dim=1; //hypothesis initialized to 1 + x + x2
+               }
+               regression.costFunction = sigma(i,1,3){ pow(regression.hypothesis[i] * regression.X[i] – regression.Y[i],2) };
+               untilConverge(regression.error = 0.1){
+                  regression.trainModel("regressionTrainingData.txt");
+               }
+               testResults<RGD> testing= regression.testModel('regressionTestingData.txt');
+               print(testing);
+               vector<double> result = regression.classifyFromFile('propertyValues.csv');
+               printf('Property Value results:\n' + result);
+
 5. KNN
-i. Model functions:
- createModel(string filename)
- testResults<knn> testModel(string filename, int k_value) – testResults.error is updated
- vector<string> classify(string filename)
- setDistanceParameter(double parameter) – parameter of 1 corresponds to Hamiltonian distance, 2 corresponds to Euclidean distance and so on.
- vector<string> confidenceCalculation(vector point) –
-vector returned contains class names in decreasing order of confidence with respect to data point calculated by default approach. For custom confidence calculation, set the confidence logic code in KNN model is as follows:
-knn_model.confidenceCalculation(vector data_point) = {
-// logic for Confidence Calculation
-}
-ii. for Construct:
-for point in km.nearestNeighbours(new_point){ //Statements }
-K value can be selected by restricting majority voting to selected points which are within a distance from the data point.
-iii. Model attributes
- Distance parameter
-Code:
-classificationModel<KNN> knn;
-knn.createModel(„iris.txt‟);
-knn.setDistanceParameter(3);
-int threshold = 4;
-vector<int> new_point = (2,3,6,1,0);
-vector<string> class_names;
-for point in knn.nearestNeighbours(new_point){
-/*dist() is used for distance calculation between 2 vectors based on distance parameter */
-if(knn.dist(new_point, point) < threshold){
-class_names.add(point[-1]);
-}
-else{
-break;
-}
-}
-//majority returns the terms with highest frequency
-class_names = majority(class_names);
-if(size(class_names) == 1){
-printf(“Class name: ”+class_names[0]);
-}
-else{
-/* Custom confidence calculation by choosing the class which contains a point closest to data point */
-knn.confidenceCalculation(vector data_point) = {
-for point in knn.nearestNeighbours(new_point){
-if(point[-1] in class_names){
-break;
-}
-}
-return point[-1];
-}
-}
+   i. Model functions:
+       createModel(string filename)
+       testResults<knn> testModel(string filename, int k_value) – testResults.error is updated
+       vector<string> classify(string filename)
+       setDistanceParameter(double parameter) – parameter of 1 corresponds to Hamiltonian distance, 2 corresponds to                Euclidean distance and so on.
+       vector<string> confidenceCalculation(vector point) – vector returned contains class names in decreasing order of             confidence with respect to data point calculated by default approach. For custom confidence calculation, set the             confidence logic code in KNN model is as follows:
+
+               knn_model.confidenceCalculation(vector data_point) = {
+               // logic for Confidence Calculation
+               }
+               
+   ii. for Construct:
+               for point in km.nearestNeighbours(new_point){ //Statements }
+               
+       K value can be selected by restricting majority voting to selected points which are within a distance from the data          point.
+       
+   iii. Model attributes:
+       Distance parameter
+      Code:
+               classificationModel<KNN> knn;
+               knn.createModel('iris.txt');
+               knn.setDistanceParameter(3);
+               int threshold = 4;
+               vector<int> new_point = (2,3,6,1,0);
+               vector<string> class_names;
+               for point in knn.nearestNeighbours(new_point){
+                  /*dist() is used for distance calculation between 2 vectors based on distance parameter */
+                  if(knn.dist(new_point, point) < threshold){
+                     class_names.add(point[-1]);
+                  }
+                  else{
+                     break;
+                  }
+               }
+               //majority returns the terms with highest frequency
+               class_names = majority(class_names);
+               if(size(class_names) == 1){
+                  printf(“Class name: ”+class_names[0]);
+               }
+               else{
+               /* Custom confidence calculation by choosing the class which contains a point closest to data point */
+                  knn.confidenceCalculation(vector data_point) = {
+                     for point in knn.nearestNeighbours(new_point){
+                        if(point[-1] in class_names){
+                           break;
+                        }
+                     }
+                     return point[-1];
+                  }
+               }
+               
 6. Naïve Bayes
 i. Model Attributes:
  priorProbabilities – dictionary containing classname as key and prior Probabilities as value
@@ -238,24 +249,45 @@ int max = db(“select max(sales) from shoe_sales”);
 The above code creates a link to database named sales_db on server localhost. User name has to be specified to verify access to database. Pass the SQL query to database link to execute it.
 10. HTTP requests: Using get, put, post and delete HTTP requests, we can easily interact with data on servers. Very useful for interacting with cloud based data storage services. This removes the limitation of a data science programmer to interact and work with data on a local machine.
 put(“http::/server/script/resources?query”);
-List of tokens types
+
+List of tokens types:
+
 1. Keywords (list of keywords mentioned in next page)
+
 2. Operators (++ , -- , - , + , / , * , ^ , | , & , || , && , ! , = , == , < , > , ?, :=)
+
 3. Delimiters (( , ) , { , } , [ , ] , ; )
+
 4. Special symbols (//, /*, */, :)
+
 5. Identifiers – case sensitive words starting with letter followed by letter/ number / _
-List of keywords
+
+List of keywords:
+
 1. dataContainer<generic type> can be  image, audio, int, bool, double, string, xls, csv, txt
+
 2. model, trainModel, testModel, saveModelToFile, loadModelFromFile, classificationModel, testResults
+
 3. database, connect
+
 4. nonBlocking
+
 5. get, put, post, delete
+
 6. for, while, do, iterator, range, untilConverge, in
+
 7. switch, case, break, continue, if, else, return
+
 8. int, double, bool, string, struct, void
+
 9. from, import
+
 10. true, false
+
 11. dict -> {set of all key: value pairs with distinct keys}
+
 12. stack, queue, tree, list, vector, set
+
 13. ANN, RGD, KNN, naiveBayes
+
 14. Sigma, sigmoid, exp
