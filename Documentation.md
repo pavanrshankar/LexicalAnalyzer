@@ -134,8 +134,8 @@ Helpful features of our language (with examples in code):
        Hypothesis coefficient vector
        Cost function, Error
        X and Y vectors – the input and target vectors
-
       Code:
+      
                classificationModel<RGD> regression;
                regression.hypothesis.size = 3; // hypothesis of the form a0 + a1x + a2x2
                for dim in regression.hypothesis{
@@ -163,6 +163,7 @@ Helpful features of our language (with examples in code):
                }
                
    ii. for Construct:
+              
                for point in km.nearestNeighbours(new_point){ //Statements }
                
        K value can be selected by restricting majority voting to selected points which are within a distance from the data          point.
