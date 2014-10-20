@@ -14,7 +14,7 @@ Some problems in the domain that can be solved by a language:
 2. Matrix operations – Data Science requires matrix operations, if arrays can be worked on by the basic operands 
    like +, -, %, * and so on, it will provide a certain degree of freedom to the programmer.
    
-3. Containers for working with data - Data science requires working with image data for image processing, csv, xls files etc. 
+3. Containers for working with data - Data science requires working with image data for image processing, csv, xls files etc.
    If the language can provide containers for such data, it will be much easier for performing several tasks 
    e.g. If image file is loaded into a container that allows pixel by pixel traversal then it can save time for image 
    processing.
@@ -27,13 +27,14 @@ Some problems in the domain that can be solved by a language:
 
 7. Frameworks for models that quick manipulation of model parameters.
 
-8. Database connection – Data science requires working with large amount of data and often we want to select certain features 
-   of given data set for a specific purpose. Databases store data efficiently and allow complex selection and join operations.
-   If the programming language can allow working with databases at a very fundamental level then it would increase scope 
-   for seamless interaction with data.
+8. Database connection – Data science requires working with large amount of data and often we want to select certain features
+   of given data set for a specific purpose. Databases store data efficiently and allow complex selection and join    
+   operations. If the programming language can allow working with databases at a very fundamental level then it would   
+   increase scope for seamless interaction with data.
 
-9. Non – blocking assignment and non – blocking operations: Often it is required in Data Science application to simultaneously 
-   update data. Non – blocking assignments can allow writing of very intuitive and precise code for this purpose.
+9. Non – blocking assignment and non – blocking operations: Often it is required in Data Science application to 
+   simultaneously update data. Non – blocking assignments can allow writing of very intuitive and precise code for this 
+   purpose.
    
 Programming features of language:
 
@@ -48,7 +49,7 @@ Programming features of language:
                                   
    Easy file access is provided for training and testing like:
 
-                              vector<int> irisresults = classifyFromFile(„iris.txt‟)
+                              vector<int> irisresults = classifyFromFile("iris.txt")
                               
 3. Language conforms to size of int as 4 bytes, size of double as 8 bytes as specified by IEEE. Implicit type conversion of 
    int to double is allowed. Explicit type conversion of int to double and double to int allowed. Apart from this all other
@@ -67,6 +68,7 @@ Helpful features of our language (with examples in code):
                               arr2[][] – arr1[][]; /* subtract elements of arr1 from arr2 at same index */
                               
 2. Mathematical functions:
+ 
    a. Sigma function: This is used for summation. Syntax:
 
                            sigma(iterating variable, start value, end value){
@@ -87,22 +89,31 @@ Helpful features of our language (with examples in code):
                            
 3. Neural Networks:
    i. Model attributes:
+
        Layers vector (add layer) – can be iterated using for (shown in example)
+      
        Learning rate
+      
        Input layer, Output layer
 
-   ii. Layer attributes:
-       Eg. Layers[layer name][node number]
+   ii. Layer attributes: Eg. Layers[layer name][node number]
+      
        Node vector – can be iterated using for (shown in example)
+      
        addNode, numNodes
+      
        layerName - string
       
    iii. Node attributes:   
+   
        Weights- dictionary {<layer name, node number> : weight, <layer name, node number> : weight}
+      
        Step function
+      
        Threshold
       
    iv. TrainModel, TestModel, Classify
+   
       Code:
       
                            classificationModel<ANN> myNet;
@@ -132,10 +143,15 @@ Helpful features of our language (with examples in code):
                            vector<int> irisResults = myNet.classifyFromFile("irisData.csv");
                            
 4. Regression using Gradient Descent
+
    i. Model attributes:
+   
        Hypothesis coefficient vector
+      
        Cost function, Error
+      
        X and Y vectors – the input and target vectors
+      
       Code:
 
                classificationModel<RGD> regression;
@@ -153,11 +169,17 @@ Helpful features of our language (with examples in code):
                printf('Property Value results:\n' + result);
 
 5. KNN
+
    i. Model functions:
+   
        createModel(string filename)
+      
        testResults<knn> testModel(string filename, int k_value) – testResults.error is updated
+      
        vector<string> classify(string filename)
+      
        setDistanceParameter(double parameter) – parameter of 1 corresponds to Hamiltonian distance, 2 corresponds to                Euclidean distance and so on.
+      
        vector<string> confidenceCalculation(vector point) – vector returned contains class names in decreasing order of             confidence with respect to data point calculated by default approach. For custom confidence calculation, set the             confidence logic code in KNN model is as follows:
 
                knn_model.confidenceCalculation(vector data_point) = {
@@ -171,7 +193,9 @@ Helpful features of our language (with examples in code):
        K value can be selected by restricting majority voting to selected points which are within a distance from the data          point.
        
    iii. Model attributes:
+   
        Distance parameter
+      
       Code:
       
                classificationModel<KNN> knn;
