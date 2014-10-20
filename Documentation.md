@@ -81,7 +81,8 @@ Helpful features of our language (with examples in code):
                               sigmoid_values.insert(4*sigmoid(i) +1);
                            }
                            
-   c. Exponent function: Return e^argument. Example:
+   c. Exponent function: Return e^argument.
+   
                            printf(exp(10));
                            
 3. Neural Networks:
@@ -103,6 +104,7 @@ Helpful features of our language (with examples in code):
       
    iv. TrainModel, TestModel, Classify
       Code:
+      
                            classificationModel<ANN> myNet;
                            myNet.inputLayer=‟input‟;
                            myNet.outputLayer=‟output‟;
@@ -135,7 +137,7 @@ Helpful features of our language (with examples in code):
        Cost function, Error
        X and Y vectors – the input and target vectors
       Code:
-      
+
                classificationModel<RGD> regression;
                regression.hypothesis.size = 3; // hypothesis of the form a0 + a1x + a2x2
                for dim in regression.hypothesis{
@@ -171,6 +173,7 @@ Helpful features of our language (with examples in code):
    iii. Model attributes:
        Distance parameter
       Code:
+      
                classificationModel<KNN> knn;
                knn.createModel('iris.txt');
                knn.setDistanceParameter(3);
