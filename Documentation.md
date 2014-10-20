@@ -3,64 +3,21 @@ APPLICATION DOMAIN:
 > Language is specific to Classification Algorithms (Neural Networks, Naïve Bayes, Linear regression with gradient descent 
   and K Nearest neighbors)
 
-SOME PROBLEMS IN THE DOMAIN THAT CAN BE SOLVED BY A LANGUAGE:
+HELPFUL FEATURES (WITH EXAMPLES IN CODE):
 
->1. Mathematical functions such as sigma, exponent, sigmoidal etc.
-
->2. Matrix operations – Data Science requires matrix operations, if arrays can be worked on by the basic operands 
-   like +, -, %, * and so on, it will provide a certain degree of freedom to the programmer.
-   
->3. Containers for working with data - Data science requires working with image data for image processing, csv, xls files   
-    etc. If the language can provide containers for such data, it will be much easier for performing several tasks 
-    e.g. If image file is loaded into a container that allows pixel by pixel traversal then it can save time for image 
-    processing.
-   
->4. Flexible range based iterators for iterating through data/ nodes of neural network/ cost function vectors etc.
-
->5. Automatic training, testing and classification support
-
->6. Some condition based loops like till error < threshold or till cost converges to 0.
-
->7. Frameworks for models that quick manipulation of model parameters.
-
->8. Database connection – Data science requires working with large amount of data and often we want to select certain features
-   of given data set for a specific purpose. Databases store data efficiently and allow complex selection and join    
-   operations. If the programming language can allow working with databases at a very fundamental level then it would   
-   increase scope for seamless interaction with data.
-
->9. Non – blocking assignment and non – blocking operations: Often it is required in Data Science application to 
-    simultaneously update data. Non – blocking assignments can allow writing of very intuitive and precise code for this 
-    purpose.
-   
-PROGRAMMING FEATURES OF LANGUAGE:
-
-> Language provides easy readability of code due to high level abstractions of classification models and simplified 
-  mathematical operations. E.g. For creation of KNN classifier, we can specify
-                                          
-                                          classificationModel<KNN> knn;
-                                          
-> Language also provides easy writability of code. E.g. array addition, subtraction and multiplication are simplified. 
-  File access for training and testing is made easy.
-                                
-                            Arr1[] + Arr2[] // adding all elements at same positions
-
-                              vector<int> irisresults = classifyFromFile("iris.txt")
-
-HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
-
->1. ARRAY OPERATIONS: Addition, subtraction, multiplication, increment, &, | etc. operations that are supported on integers 
-    will be supported on integer arrays. Such operations will be applied element wise to the arrays. For two arrays, 
-    it will be applied elements with equal indexes in respective arrays but will be supported on if array sizes are equal. 
-    This will be useful for data science as we need to apply many operations on matrices. 
-    E.g. //operations on arrays
+> ARRAY OPERATIONS: Addition, subtraction, multiplication, increment, &, | etc. operations that are supported on integers 
+  will be supported on integer arrays. Such operations will be applied element wise to the arrays. For two arrays, 
+  it will be applied elements with equal indexes in respective arrays but will be supported on if array sizes are equal. 
+  This will be useful for data science as we need to apply many operations on matrices. 
+  E.g. //operations on arrays
    
                               int arr1[10][10], arr2[10][10];
                               arr1[][]++; //add 1 to all elements of arr1
                               arr2[][] – arr1[][]; /* subtract elements of arr1 from arr2 at same index */
                               
->2. MATHEMATICAL FUNCTIONS:
+> MATHEMATICAL FUNCTIONS:
     
-   a. Sigma function: This is used for summation. Syntax:
+  a. Sigma function: This is used for summation. Syntax:
 
                            sigma(iterating variable, start value, end value){
                               //formula to be summed
@@ -78,7 +35,7 @@ HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
    
                            printf(exp(10));
                            
->3. NEURAL NETWORKS:
+> NEURAL NETWORKS:
 
    i. Model attributes:
 
@@ -134,7 +91,7 @@ HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
                            int result = myNet.classify(sample);
                            vector<int> irisResults = myNet.classifyFromFile("irisData.csv");
                            
->4. REGRESSION USING GRADIENT DESCENT
+> REGRESSION USING GRADIENT DESCENT
 
    i. Model attributes:
    
@@ -162,7 +119,7 @@ HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
                vector<double> result = regression.classifyFromFile('propertyValues.csv');
                printf('Property Value results:\n' + result);
 
->5. KNN
+> KNN
 
    i. Model functions:
    
@@ -222,7 +179,7 @@ HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
                   }
                }
                
->6. NAÏVE BAYES
+> NAÏVE BAYES
 
    i. Model Attributes:
    
@@ -265,8 +222,8 @@ HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
                result = nbc.classify(„testing.txt‟);
                printf(“Class of result is: ”+result);
                
->7. NON-BLOCKING ASSIGNMENTS & ASSIGNMENT BLOCKS: Non-blocking assignment like the ‘<=’ in Verilog can be helpful for   
-    simultaneous update of multiple items without regard to order or dependence upon on each other. Once example of where it     will be useful is when we update parameters of cost-function using gradient descent.
+> NON-BLOCKING ASSIGNMENTS & ASSIGNMENT BLOCKS: Non-blocking assignment like the ‘<=’ in Verilog can be helpful for   
+  simultaneous update of multiple items without regard to order or dependence upon on each other. Once example of where it     will be useful is when we update parameters of cost-function using gradient descent.
 
                //Non-blocking assignment
                a := b;
@@ -279,71 +236,27 @@ HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
                j[3] = j[3] – diff(j[],3);
                }//all four updates happen in a non-blocking manner
                
->8. dataContainer data type: This is a data type that will act as a container for data used for data science tasks. It is  
-    similar to how C++ defines containers like Vector, Stack and Queue of types int, char etc. e. g. Vector<int> or    
-    Stack<char>. The types accepted by the data container will be image, csv, xls. Type image will allow pixel by pixel  
-    traversal, useful for image processing purposes. Type csv and xls can be used for reading in data from csv and excel 
-    files and used for traversing through data points, used for getting field names and manipulating data at a lower level.
+> dataContainer data type: This is a data type that will act as a container for data used for data science tasks. It is  
+  similar to how C++ defines containers like Vector, Stack and Queue of types int, char etc. e. g. Vector<int> or    
+  Stack<char>. The types accepted by the data container will be image, csv, xls. Type image will allow pixel by pixel  
+  traversal, useful for image processing purposes. Type csv and xls can be used for reading in data from csv and excel 
+  files and used for traversing through data points, used for getting field names and manipulating data at a lower level.
 
                //creating a data container of image type
                dataContainer<image> img= loadImage(“~/pictures/iris.jpg”);
                
->9. DATABASE FUNCTIONS: Connection to database can be established easily and queries run on it directly with simple syntax.  
-    Currently, with the rise of big data, there is increasing need for running machine learning and AI algorithms on data   
-    easily selected through joins/views from an efficient database system. This feature will decrease hassle of any 
-    programmer trying to work with both data from a database and ML algorithms.
+> DATABASE FUNCTIONS: Connection to database can be established easily and queries run on it directly with simple syntax.  
+  Currently, with the rise of big data, there is increasing need for running machine learning and AI algorithms on data   
+  easily selected through joins/views from an efficient database system. This feature will decrease hassle of any 
+  programmer trying to work with both data from a database and ML algorithms.
 
                //creating a database variable with connection details
                database db = connect(“user_name”,”sales_db”,”localhost”);
                int max = db(“select max(sales) from shoe_sales”);
-               
-> The above code creates a link to database named sales_db on server localhost. User name has to be specified to verify  
-  access to database. Pass the SQL query to database link to execute it.
 
->10. HTTP REQUESTS: Using get, put, post and delete HTTP requests, we can easily interact with data on servers. Very useful 
-     for interacting with cloud based data storage services. This removes the limitation of a data science programmer to 
-     interact and work with data on a local machine.
+> HTTP REQUESTS: Using get, put, post and delete HTTP requests, we can easily interact with data on servers. Very useful 
+  for interacting with cloud based data storage services. This removes the limitation of a data science programmer to 
+  interact and work with data on a local machine.
 
                put(“http::/server/script/resources?query”);
 
-LIST OF TOKENS TYPES:
-
->1. Keywords (list of keywords mentioned in next page)
-
->2. Operators (++ , -- , - , + , / , * , ^ , | , & , || , && , ! , = , == , < , > , ?, :=)
-
->3. Delimiters (( , ) , { , } , [ , ] , ; )
-
->4. Special symbols (//, /*, */, :)
-
->5. Identifiers – case sensitive words starting with letter followed by letter/ number / _
-
-LIST OF KEYWORDS:
-
->1. dataContainer<generic type> can be  image, audio, int, bool, double, string, xls, csv, txt
-
->2. model, trainModel, testModel, saveModelToFile, loadModelFromFile, classificationModel, testResults
-
->3. database, connect
-
->4. nonBlocking
-
->5. get, put, post, delete
-
->6. for, while, do, iterator, range, untilConverge, in
-
->7. switch, case, break, continue, if, else, return
-
->8. int, double, bool, string, struct, void
-
->9. from, import
-
->10. true, false
-
->11. dict -> {set of all key: value pairs with distinct keys}
-
->12. stack, queue, tree, list, vector, set
-
->13. ANN, RGD, KNN, naiveBayes
-
->14. sigma, sigmoid, exp
