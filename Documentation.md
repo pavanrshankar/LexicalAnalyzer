@@ -88,6 +88,7 @@ Helpful features of our language (with examples in code):
                            printf(exp(10));
                            
 3. Neural Networks:
+
    i. Model attributes:
 
        Layers vector (add layer) – can be iterated using for (shown in example)
@@ -159,7 +160,7 @@ Helpful features of our language (with examples in code):
                for dim in regression.hypothesis{
                   dim=1; //hypothesis initialized to 1 + x + x2
                }
-               regression.costFunction = sigma(i,1,3){ pow(regression.hypothesis[i] * regression.X[i] – regression.Y[i],2) };
+               regression.costFunction = sigma(i,1,3){ pow(regression.hypothesis[i]*regression.X[i]–regression.Y[i],2)};
                untilConverge(regression.error = 0.1){
                   regression.trainModel("regressionTrainingData.txt");
                }
