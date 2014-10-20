@@ -318,7 +318,7 @@ LIST OF TOKENS TYPES:
 
 5. Identifiers – case sensitive words starting with letter followed by letter/ number / _
 
-List of keywords:
+LIST OF KEYWORDS:
 
 1. dataContainer<generic type> can be  image, audio, int, bool, double, string, xls, csv, txt
 
