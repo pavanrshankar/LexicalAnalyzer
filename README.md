@@ -13,8 +13,8 @@ Steps to run the code:
    or 
    Type the following code in python application:
 
-      import lexer
-      lexer.main()
+                                                import lexer
+                                                lexer.main()
 
 Note:
 > Make sure the test case files are in the same folder as the lexer.py program for convenience.
