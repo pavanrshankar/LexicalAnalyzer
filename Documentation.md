@@ -1,4 +1,4 @@
-Application Domain:
+APPLICATION DOMAIN:
 
 Our language is specific to Classification Algorithms. Classification is a major Machine Learning methodology that involves 
 learning from a given data and deriving some meaning from new data. The classification algorithms are not easy and intuitive 
@@ -7,7 +7,7 @@ machine learning researcher/programmer. We chose 4 popular classification algori
 Linear regression with gradient descent and K Nearest neighbors and made a language that enables easy implementation 
 of these algorithms but at the same time allows low level modifications.
 
-Some problems in the domain that can be solved by a language:
+SOME PROBLEMS IN THE DOMAIN THAT CAN BE SOLVED BY A LANGUAGE:
 
 1. Mathematical functions such as sigma, exponent, sigmoidal etc.
 
@@ -36,7 +36,7 @@ Some problems in the domain that can be solved by a language:
    simultaneously update data. Non – blocking assignments can allow writing of very intuitive and precise code for this 
    purpose.
    
-Programming features of language:
+PROGRAMMING FEATURES OF LANGUAGE:
 
 1. Language provides easy readability of code due to high level abstractions of classification models and simplified 
    mathematical operations. E.g. For creation of KNN classifier, we can specify
@@ -55,9 +55,9 @@ Programming features of language:
    int to double is allowed. Explicit type conversion of int to double and double to int allowed. Apart from this all other
    type conversion is illegal.
    
-Helpful features of our language (with examples in code):
+HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
 
-1. Array operations: Addition, subtraction, multiplication, increment, &, | etc. operations that are supported on integers 
+1. ARRAY OPERATIONS: Addition, subtraction, multiplication, increment, &, | etc. operations that are supported on integers 
    will be supported on integer arrays. Such operations will be applied element wise to the arrays. For two arrays, 
    it will be applied elements with equal indexes in respective arrays but will be supported on if array sizes are equal. 
    This will be useful for data science as we need to apply many operations on matrices. 
@@ -67,7 +67,7 @@ Helpful features of our language (with examples in code):
                               arr1[][]++; //add 1 to all elements of arr1
                               arr2[][] – arr1[][]; /* subtract elements of arr1 from arr2 at same index */
                               
-2. Mathematical functions:
+2. MATHEMATICAL FUNCTIONS:
  
    a. Sigma function: This is used for summation. Syntax:
 
@@ -87,7 +87,7 @@ Helpful features of our language (with examples in code):
    
                            printf(exp(10));
                            
-3. Neural Networks:
+3. NEURAL NETWORKS:
 
    i. Model attributes:
 
@@ -143,7 +143,7 @@ Helpful features of our language (with examples in code):
                            int result = myNet.classify(sample);
                            vector<int> irisResults = myNet.classifyFromFile("irisData.csv");
                            
-4. Regression using Gradient Descent
+4. REGRESSION USING GRADIENT DESCENT
 
    i. Model attributes:
    
@@ -233,7 +233,7 @@ Helpful features of our language (with examples in code):
                   }
                }
                
-6. Naïve Bayes
+6. NAÏVE BAYES
 
    i. Model Attributes:
    
@@ -276,7 +276,7 @@ iii. Constructs:
                result = nbc.classify(„testing.txt‟);
                printf(“Class of result is: ”+result);
                
-7. Non-blocking assignments & assignment blocks: Non-blocking assignment like the ‘<=’ in Verilog can be helpful for simultaneous update of multiple items without regard to order or dependence upon on each other. Once example of where it will be useful is when we update parameters of cost-function using gradient descent.
+7. NON-BLOCKING ASSIGNMENTS & ASSIGNMENT BLOCKS: Non-blocking assignment like the ‘<=’ in Verilog can be helpful for simultaneous update of multiple items without regard to order or dependence upon on each other. Once example of where it will be useful is when we update parameters of cost-function using gradient descent.
 
                //Non-blocking assignment
                a := b;
@@ -294,7 +294,7 @@ iii. Constructs:
                //creating a data container of image type
                dataContainer<image> img= loadImage(“~/pictures/iris.jpg”);
                
-9. Database functions: Connection to database can be established easily and queries run on it directly with simple syntax. Currently, with the rise of big data, there is increasing need for running machine learning and AI algorithms on data easily selected through joins/views from an efficient database system. This feature will decrease hassle of any programmer trying to work with both data from a database and ML algorithms.
+9. DATABASE FUNCTIONS: Connection to database can be established easily and queries run on it directly with simple syntax. Currently, with the rise of big data, there is increasing need for running machine learning and AI algorithms on data easily selected through joins/views from an efficient database system. This feature will decrease hassle of any programmer trying to work with both data from a database and ML algorithms.
 
                //creating a database variable with connection details
                database db = connect(“user_name”,”sales_db”,”localhost”);
@@ -302,11 +302,11 @@ iii. Constructs:
                
 The above code creates a link to database named sales_db on server localhost. User name has to be specified to verify access to database. Pass the SQL query to database link to execute it.
 
-10. HTTP requests: Using get, put, post and delete HTTP requests, we can easily interact with data on servers. Very useful for interacting with cloud based data storage services. This removes the limitation of a data science programmer to interact and work with data on a local machine.
+10. HTTP REQUESTS: Using get, put, post and delete HTTP requests, we can easily interact with data on servers. Very useful for interacting with cloud based data storage services. This removes the limitation of a data science programmer to interact and work with data on a local machine.
 
                put(“http::/server/script/resources?query”);
 
-List of tokens types:
+LIST OF TOKENS TYPES:
 
 1. Keywords (list of keywords mentioned in next page)
 
