@@ -222,7 +222,7 @@ Helpful features of our language (with examples in code):
                   printf(“Class name: ”+class_names[0]);
                }
                else{
-               /* Custom confidence calculation by choosing class which contains a point closest to data point */
+               /* Confidence calculation by choosing class which contains a point closest to data point */
                   knn.confidenceCalculation(vector data_point) = {
                      for point in knn.nearestNeighbours(new_point){
                         if(point[-1] in class_names){
@@ -234,53 +234,75 @@ Helpful features of our language (with examples in code):
                }
                
 6. Naïve Bayes
-i. Model Attributes:
- priorProbabilities – dictionary containing classname as key and prior Probabilities as value
-ii. Model Functions:
- trainModel(string filename, vector<string> classnames)
- testResults<naiveBayes> testModel(filename) - testResults.error updated.
- vector<string> classify(filename)
+
+   i. Model Attributes:
+   
+       priorProbabilities – dictionary containing classname as key and prior Probabilities as value
+      
+   ii. Model Functions:
+   
+       trainModel(string filename, vector<string> classnames)
+         
+       testResults<naiveBayes> testModel(filename) - testResults.error updated.
+      
+       vector<string> classify(filename)
+      
 iii. Constructs:
- Probability calculations are dependent on whether attribute is discrete or continuous. Class conditional probability calculation for discrete attributes is done in a frequentist approach by counting the number of occurrences. For continuous attributes Gaussian distribution is used.
- Custom class conditional probability is set as follows
-naïveBayesModel.defaultProbabilityCalculationDiscrete (vector<string> attribute, Boolean change_value)
-[‘all’] is specified for all the attributes to follow new probability calculations else specified vector of strings follow new probability calculations.
-naïveBayesModel.discreteProbabilityCalculation(int desirable_outcomes, int total_outcomes) = {
-//new probability estimation
-}
-Code:
-Consider the training data set with input fields Wind speed, Power output, Generator Winding Temperature and output field Wind Turbine status as specified in wind.txt. Unclassified data points are specified in classification.txt file. Usage of Naïve Bayes classifier is as follows:
-classificationModel<naiveBayes> nbc;
-nbc.trainModel(„wind.txt‟);
-nbc.defaultProbabilityCalculationDiscrete(„Power output‟, false);
-nbc.discreteProbabilityCalculations(int desirable_outcomes, int total_outcomes) = {
-int m = 2; //setting m-estimate parameter
-double p = (desirable_outcomes / total_outcomes);
-return (desirable_outcomes + m*p) / (total_outcomes + m);
-}
-result = nbc.classify(„testing.txt‟);
-printf(“Class of result is: ”+result);
+
+    Probability calculations are dependent on whether attribute is discrete or continuous. Class conditional probability         calculation for discrete attributes is done in a frequentist approach by counting the number of occurrences. For             continuous attributes Gaussian distribution is used.
+      
+    Custom class conditional probability is set as follows:
+      
+               nbc.defaultProbabilityCalculationDiscrete (vector<string> attribute, Boolean change_value)
+
+   [‘all’] is specified for all the attributes to follow new probability calculations else specified vector of strings          follow new probability calculations.
+      
+               nbc.discreteProbabilityCalculation(int desirable_outcomes, int total_outcomes) = {
+               //new probability estimation
+               }
+      Code:
+      
+      Consider the training data set with input fields Wind speed, Power output, Generator Winding Temperature and output          field Wind Turbine status as specified in wind.txt. Unclassified data points are specified in classification.txt file.       Usage of Naïve Bayes classifier is as follows:
+
+               classificationModel<naiveBayes> nbc;
+               nbc.trainModel("wind.txt");
+               nbc.defaultProbabilityCalculationDiscrete("Power output", false);
+               nbc.discreteProbabilityCalculations(int desirable_outcomes, int total_outcomes) = {
+                  int m = 2; //setting m-estimate parameter
+                  double p = (desirable_outcomes / total_outcomes);
+                  return (desirable_outcomes + m*p) / (total_outcomes + m);
+               }
+               result = nbc.classify(„testing.txt‟);
+               printf(“Class of result is: ”+result);
+               
 7. Non-blocking assignments & assignment blocks: Non-blocking assignment like the ‘<=’ in Verilog can be helpful for simultaneous update of multiple items without regard to order or dependence upon on each other. Once example of where it will be useful is when we update parameters of cost-function using gradient descent.
-//Non-blocking assignment
-a := b;
-b := a; //this will swap a and b
-nonBlocking{
-//j is array of coefficients of cost function
-j[0] = j[0] – diff(j[],0);
-j[1] = j[1] – diff(j[],1);
-j[2] = j[2] - diff(j[],2);
-j[3] = j[3] – diff(j[],3);
-}//all four updates happen in a non-blocking manner
+
+               //Non-blocking assignment
+               a := b;
+               b := a; //this will swap a and b
+               nonBlocking{
+               //j is array of coefficients of cost function
+               j[0] = j[0] – diff(j[],0);
+               j[1] = j[1] – diff(j[],1);
+               j[2] = j[2] - diff(j[],2);
+               j[3] = j[3] – diff(j[],3);
+               }//all four updates happen in a non-blocking manner
+               
 8. dataContainer data type: This is a data type that will act as a container for data used for data science tasks. It is similar to how C++ defines containers like Vector, Stack and Queue of types int, char etc. e. g. Vector<int> or Stack<char>. The types accepted by the data container will be image, csv, xls. Type image will allow pixel by pixel traversal, useful for image processing purposes. Type csv and xls can be used for reading in data from csv and excel files and used for traversing through data points, used for getting field names and manipulating data at a lower level.
-//creating a data container of image type
-dataContainer<image> img= loadImage(“~/pictures/iris.jpg”);
+
+               //creating a data container of image type
+               dataContainer<image> img= loadImage(“~/pictures/iris.jpg”);
+               
 9. Database functions: Connection to database can be established easily and queries run on it directly with simple syntax. Currently, with the rise of big data, there is increasing need for running machine learning and AI algorithms on data easily selected through joins/views from an efficient database system. This feature will decrease hassle of any programmer trying to work with both data from a database and ML algorithms.
-//creating a database variable with connection details
-database db = connect(“user_name”,”sales_db”,”localhost”);
-int max = db(“select max(sales) from shoe_sales”);
+
+               //creating a database variable with connection details
+               database db = connect(“user_name”,”sales_db”,”localhost”);
+               int max = db(“select max(sales) from shoe_sales”);
+               
 The above code creates a link to database named sales_db on server localhost. User name has to be specified to verify access to database. Pass the SQL query to database link to execute it.
+
 10. HTTP requests: Using get, put, post and delete HTTP requests, we can easily interact with data on servers. Very useful for interacting with cloud based data storage services. This removes the limitation of a data science programmer to interact and work with data on a local machine.
-put(“http::/server/script/resources?query”);
+               put(“http::/server/script/resources?query”);
 
 List of tokens types:
 
