@@ -260,9 +260,10 @@ iii. Constructs:
                nbc.discreteProbabilityCalculation(int desirable_outcomes, int total_outcomes) = {
                //new probability estimation
                }
-      Code:
       
-      Consider the training data set with input fields Wind speed, Power output, Generator Winding Temperature and output          field Wind Turbine status as specified in wind.txt. Unclassified data points are specified in classification.txt file.       Usage of Naïve Bayes classifier is as follows:
+   Consider the training data set with input fields Wind speed, Power output, Generator Winding Temperature and output          field Wind Turbine status as specified in wind.txt. Unclassified data points are specified in classification.txt file.       Usage of Naïve Bayes classifier is as follows:
+   
+   Code:
 
                classificationModel<naiveBayes> nbc;
                nbc.trainModel("wind.txt");
@@ -302,6 +303,7 @@ iii. Constructs:
 The above code creates a link to database named sales_db on server localhost. User name has to be specified to verify access to database. Pass the SQL query to database link to execute it.
 
 10. HTTP requests: Using get, put, post and delete HTTP requests, we can easily interact with data on servers. Very useful for interacting with cloud based data storage services. This removes the limitation of a data science programmer to interact and work with data on a local machine.
+
                put(“http::/server/script/resources?query”);
 
 List of tokens types:
