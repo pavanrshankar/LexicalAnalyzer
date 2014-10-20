@@ -64,8 +64,8 @@ HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
                               arr2[][] – arr1[][]; /* subtract elements of arr1 from arr2 at same index */
                               
 >2. MATHEMATICAL FUNCTIONS:
- 
-   a. Sigma function: This is used for summation. Syntax:
+    
+    a. Sigma function: This is used for summation. Syntax:
 
                            sigma(iterating variable, start value, end value){
                               //formula to be summed
@@ -189,8 +189,6 @@ HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
               
                for point in km.nearestNeighbours(new_point){ //Statements }
                
-       K value can be selected by restricting majority voting to selected points which are within a distance from the data          point.
-       
    iii. Model attributes:
    
        Distance parameter
