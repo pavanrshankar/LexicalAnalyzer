@@ -1,4 +1,4 @@
-ML-DSL
+Classifyzer
 ======
 
 Lexical Analyzer for Classification algorithms 
