@@ -6,25 +6,26 @@ import pdb
 
 # Rules for tokenizing
 rules = [																														
-			(r'[\"][^\"]*?[\"]|[\'][^\']*?[\']', 'LITERAL: STRING'),
-			(r'\-?\b\d*\.\d+\b', 'LITERAL: DOUBLE'),
-			(r'\-?\b\d+\b', 'LITERAL: INT'),
-			(r'\bint\b|\bdouble\b|\bbool\b|\bstruct\b|\bchar\b|\bstring\b', 'KEYWORD: ELEMENTARY DATATYPE'),
-			(r'\bvector\b|\bset\b|\btree\b|\blist\b|\bqueue\b|\bstack\b|\bdataContainer\b| \
-			 \bmodel\b|\btestResults\b|\bclassificationModel\b',	'KEYWORD: COMPLEX DATATYPE'),
-			(r'\bprintf\b|\bscanf\b|\bsigma\b|\bsigmoid\b|\bexp\b|\bconnect\b',	'KEYWORD: STANDARD FUNCTION'),
-			(r'\btrainModel\b|\btestModel\b|\bclassify\b|\bloadModelFromFile\b|\bsaveModelToFile\b|\bclassifyFromFile\b', \
-			 'KEYWORD: MODEL FUNCTION'),
-			(r'\bget\b|\bput\b|\bpost\b|\bdelete\b', 'KEYWORD: HTTP FUNCTION'),
-			(r'\bfor\b|\bwhile\b|\bdo\b|\buntilConverge\b|\brange\b|\biterator\b', 'KEYWORD: ITERATION'),
-			(r'\bif\b|\belse\b|\bswitch\b|\bcase\b|\bcontinue\b|\bbreak\b|\breturn\b|\bin\b',	'KEYWORD: DECISION/BRANCH STATEMENT'),
-			(r'\baudio\b|\bimage\b|\bcsv\b|\btxt\b|\bxls\b', 'KEYWORD: EXTENDED TYPE'),
-			(r'\bANN\b|\bRGD\b|\bnaiveBayes\b|\bKNN\b', 'KEYWORD: MODEL TYPE'),
-			(r'\bfrom\b|\bimport\b|\bvoid\b|\btrue\b|\bfalse\b|\bnonBlocking\b|\bdatabase\b', 'KEYWORD: OTHERS'),		
-			(r'\+\+|\-\-|\^\=|\|\||\&\&|\!\=|\=\=|\?|\:\=',	'OPERATORS: COMPLEX'),
-			(r'\-|\+|\/|\*|\^|\||\&|\=|\<|\>|\!', 'OPERATORS: SIMPLE'),
-			(r'\{|\}|\[|\]|\(|\)|\;|\,|\.|\:', 'DELIMITERS'),   
-			(r'(?<=\s)[a-zA-Z][a-zA-Z0-9_]*',  'IDENTIFIERS')
+	(r'[\"][^\"]*?[\"]|[\'][^\']*?[\']', 'LITERAL: STRING'),
+	(r'\-?\b\d*\.\d+\b', 'LITERAL: DOUBLE'),
+	(r'\-?\b\d+\b', 'LITERAL: INT'),
+	(r'\bint\b|\bdouble\b|\bbool\b|\bstruct\b|\bchar\b|\bstring\b', 'KEYWORD: ELEMENTARY DATATYPE'),
+	(r'\bvector\b|\bset\b|\btree\b|\blist\b|\bqueue\b|\bstack\b|\bdataContainer\b| \
+	 \bmodel\b|\btestResults\b|\bclassificationModel\b',	'KEYWORD: COMPLEX DATATYPE'),
+	(r'\bprintf\b|\bscanf\b|\bsigma\b|\bsigmoid\b|\bexp\b|\bconnect\b', 'KEYWORD: STANDARD FUNCTION'),
+	(r'\btrainModel\b|\btestModel\b|\bclassify\b|\bloadModelFromFile\b|\bsaveModelToFile\b|\bclassifyFromFile\b', \
+	 'KEYWORD: MODEL FUNCTION'),
+	(r'\bget\b|\bput\b|\bpost\b|\bdelete\b', 'KEYWORD: HTTP FUNCTION'),
+	(r'\bfor\b|\bwhile\b|\bdo\b|\buntilConverge\b|\brange\b|\biterator\b', 'KEYWORD: ITERATION'),
+	(r'\bif\b|\belse\b|\bswitch\b|\bcase\b|\bcontinue\b|\bbreak\b|\breturn\b|\bin\b', \
+	 'KEYWORD: DECISION/BRANCH STATEMENT'),
+	(r'\baudio\b|\bimage\b|\bcsv\b|\btxt\b|\bxls\b', 'KEYWORD: EXTENDED TYPE'),
+	(r'\bANN\b|\bRGD\b|\bnaiveBayes\b|\bKNN\b', 'KEYWORD: MODEL TYPE'),
+	(r'\bfrom\b|\bimport\b|\bvoid\b|\btrue\b|\bfalse\b|\bnonBlocking\b|\bdatabase\b', 'KEYWORD: OTHERS'),		
+	(r'\+\+|\-\-|\^\=|\|\||\&\&|\!\=|\=\=|\?|\:\=',	'OPERATORS: COMPLEX'),
+	(r'\-|\+|\/|\*|\^|\||\&|\=|\<|\>|\!', 'OPERATORS: SIMPLE'),
+	(r'\{|\}|\[|\]|\(|\)|\;|\,|\.|\:', 'DELIMITERS'),   
+	(r'(?<=\s)[a-zA-Z][a-zA-Z0-9_]*',  'IDENTIFIERS')
 ]
 
 def lexicalAnalyzer(code, outputfile):
