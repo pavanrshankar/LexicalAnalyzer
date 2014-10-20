@@ -1,11 +1,7 @@
 APPLICATION DOMAIN:
 
-Our language is specific to Classification Algorithms. Classification is a major Machine Learning methodology that involves 
-learning from a given data and deriving some meaning from new data. The classification algorithms are not easy and intuitive 
-to implement. There are different ways in which every algorithm is modeled and different working paradigm behind each of those. Providing a standard for writing such programs is crucial but at the same time customizability must be offered to the 
-machine learning researcher/programmer. We chose 4 popular classification algorithms Neural Networks, Naïve Bayes, 
-Linear regression with gradient descent and K Nearest neighbors and made a language that enables easy implementation 
-of these algorithms but at the same time allows low level modifications.
+Language is specific to Classification Algorithms (Neural Networks, Naïve Bayes, Linear regression with gradient descent 
+and K Nearest neighbors)
 
 SOME PROBLEMS IN THE DOMAIN THAT CAN BE SOLVED BY A LANGUAGE:
 
@@ -247,11 +243,11 @@ HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
       
        vector<string> classify(filename)
       
-iii. Constructs:
+   iii. Constructs:
 
-    Probability calculations are dependent on whether attribute is discrete or continuous. Class conditional probability         calculation for discrete attributes is done in a frequentist approach by counting the number of occurrences. For             continuous attributes Gaussian distribution is used.
+       Probability calculations are dependent on whether attribute is discrete or continuous. Class conditional probability         calculation for discrete attributes is done in a frequentist approach by counting the number of occurrences. For             continuous attributes Gaussian distribution is used.
       
-    Custom class conditional probability is set as follows:
+       Custom class conditional probability is set as follows:
       
                nbc.defaultProbabilityCalculationDiscrete (vector<string> attribute, Boolean change_value)
 
