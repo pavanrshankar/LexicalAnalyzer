@@ -1,24 +1,7 @@
 ML-DSL
 ======
 
-Design and Implementation of Lexical Analyzer for Classification algorithms 
-
-Disclaimer: The program requires python 2.7
-
-Steps to run the code:
-
-1. Download all the files to directory containing python application
-
-2. Add input to a text file and save it in the destination containing python application
-
-3. Run the lexer.py directly by opening file in Python 2.7
-   or 
-   Type the following code in python application:
-
-                                                import lexer
-                                                lexer.main()
-            
-4. Specify the name of input file on being  prompted for input            
+Lexical Analyzer for Classification algorithms 
 
 Note:
 > Make sure the test case files are in the same folder as the lexer.py program for convenience.
