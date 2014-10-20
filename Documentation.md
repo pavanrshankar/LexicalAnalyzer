@@ -346,4 +346,4 @@ List of keywords:
 
 13. ANN, RGD, KNN, naiveBayes
 
-14. Sigma, sigmoid, exp
+14. sigma, sigmoid, exp
