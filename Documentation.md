@@ -34,22 +34,22 @@ SOME PROBLEMS IN THE DOMAIN THAT CAN BE SOLVED BY A LANGUAGE:
    
 PROGRAMMING FEATURES OF LANGUAGE:
 
->1. Language provides easy readability of code due to high level abstractions of classification models and simplified 
-    mathematical operations. E.g. For creation of KNN classifier, we can specify
+> Language provides easy readability of code due to high level abstractions of classification models and simplified 
+  mathematical operations. E.g. For creation of KNN classifier, we can specify
                                           
                                           classificationModel<KNN> knn;
                                           
->2. Language also provides easy writability of code. E.g. array addition, subtraction and multiplication are simplified. 
+> Language also provides easy writability of code. E.g. array addition, subtraction and multiplication are simplified. 
                                 
                                   Arr1[] + Arr2[] adds all the elements at same index. 
                                   
-   Easy file access is provided for training and testing like:
+  Easy file access is provided for training and testing like:
 
                               vector<int> irisresults = classifyFromFile("iris.txt")
                               
->3. Language conforms to size of int as 4 bytes, size of double as 8 bytes as specified by IEEE. Implicit type conversion of 
-    int to double is allowed. Explicit type conversion of int to double and double to int allowed. Apart from this all other
-    type conversion is illegal.
+> Language conforms to size of int as 4 bytes, size of double as 8 bytes as specified by IEEE. Implicit type conversion of 
+  int to double is allowed. Explicit type conversion of int to double and double to int allowed. Apart from this all other
+  type conversion is illegal.
    
 HELPFUL FEATURES OF OUR LANGUAGE (WITH EXAMPLES IN CODE):
 
