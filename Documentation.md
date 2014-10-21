@@ -183,21 +183,21 @@ HELPFUL FEATURES (WITH EXAMPLES IN CODE):
 
    i. Model Attributes:
    
-       priorProbabilities – dictionary containing classname as key and prior Probabilities as value
+      - priorProbabilities – dictionary containing classname as key and prior Probabilities as value
       
    ii. Model Functions:
    
-       trainModel(string filename, vector<string> classnames)
+      - trainModel(string filename, vector<string> classnames)
          
-       testResults<naiveBayes> testModel(filename) - testResults.error updated.
+      -  testResults<naiveBayes> testModel(filename) - testResults.error updated.
       
-       vector<string> classify(filename)
+      - vector<string> classify(filename)
       
    iii. Constructs:
-
-       Probability calculations are dependent on whether attribute is discrete or continuous. Class conditional probability         calculation for discrete attributes is done in a frequentist approach by counting the number of occurrences. For             continuous attributes Gaussian distribution is used.
+   
+      - Probability calculations are dependent on whether attribute is discrete or continuous. Class conditional probability         calculation for discrete attributes is done in a frequentist approach by counting the number of occurrences. For             continuous attributes Gaussian distribution is used.
       
-       Custom class conditional probability is set as follows:
+      - Custom class conditional probability is set as follows:
       
                nbc.defaultProbabilityCalculationDiscrete (vector<string> attribute, Boolean change_value)
 
@@ -222,7 +222,7 @@ HELPFUL FEATURES (WITH EXAMPLES IN CODE):
                result = nbc.classify(„testing.txt‟);
                printf(“Class of result is: ”+result);
                
-> NON-BLOCKING ASSIGNMENTS & ASSIGNMENT BLOCKS: Non-blocking assignment like the ‘<=’ in Verilog can be helpful for   
+> NON-BLOCKING ASSIGNMENTS & ASSIGNMENT BLOCKS: Non-blocking assignment like the ‘<=’ in Verilog can be helpful for
   simultaneous update of multiple items without regard to order or dependence upon on each other. Once example of where it     will be useful is when we update parameters of cost-function using gradient descent.
 
                //Non-blocking assignment
