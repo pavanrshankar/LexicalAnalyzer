@@ -132,9 +132,10 @@ HELPFUL FEATURES (WITH EXAMPLES IN CODE):
       - setDistanceParameter(double parameter) – 
         parameter of 1 corresponds to Hamiltonian distance, 2 corresponds to Euclidean distance and so on.
       
-      - vector<string> confidenceCalculation(vector point) – vector returned contains class names in decreasing 
-        order of confidence with respect to data point calculated by default approach. For custom confidence 
-        calculation, set the confidence logic code in KNN model is as follows:
+      - vector<string> confidenceCalculation(vector point) – 
+        vector returned contains class names in decreasing order of confidence with respect to data point 
+        calculated by default approach. For custom confidence calculation, set the confidence logic code 
+        in KNN model is as follows:
 
                knn_model.confidenceCalculation(vector data_point) = {
                // logic for Confidence Calculation
