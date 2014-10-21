@@ -38,28 +38,28 @@ HELPFUL FEATURES (WITH EXAMPLES IN CODE):
 > NEURAL NETWORKS:
 
    i. Model attributes:
-
-       Layers vector (add layer) – can be iterated using for (shown in example)
+   
+      - Layers vector (add layer) – can be iterated using for (shown in example)
       
-       Learning rate
+      - Learning rate
       
-       Input layer, Output layer
+      - Input layer, Output layer
 
    ii. Layer attributes: Eg. Layers[layer name][node number]
       
-       Node vector – can be iterated using for (shown in example)
+      - Node vector – can be iterated using for (shown in example)
       
-       addNode, numNodes
+      - addNode, numNodes
       
-       layerName - string
+      - layerName - string
       
    iii. Node attributes:   
    
-       Weights- dictionary {<layer name, node number> : weight, <layer name, node number> : weight}
+      - Weights- dictionary {<layer name, node number> : weight, <layer name, node number> : weight}
       
-       Step function
+      - Step function
       
-       Threshold
+      - Threshold
       
    iv. TrainModel, TestModel, Classify
    
@@ -95,11 +95,11 @@ HELPFUL FEATURES (WITH EXAMPLES IN CODE):
 
    i. Model attributes:
    
-       Hypothesis coefficient vector
+      - Hypothesis coefficient vector
       
-       Cost function, Error
+      - Cost function, Error
       
-       X and Y vectors – the input and target vectors
+      - X and Y vectors – the input and target vectors
       
       Code:
 
@@ -132,8 +132,9 @@ HELPFUL FEATURES (WITH EXAMPLES IN CODE):
       - setDistanceParameter(double parameter) – 
         parameter of 1 corresponds to Hamiltonian distance, 2 corresponds to Euclidean distance and so on.
       
-      - vector<string> confidenceCalculation(vector point) – vector returned contains class names in decreasing order of
-        confidence with respect to data point calculated by default approach. For custom confidence calculation, set the             confidence logic code in KNN model is as follows:
+      - vector<string> confidenceCalculation(vector point) – vector returned contains class names in decreasing 
+        order of confidence with respect to data point calculated by default approach. For custom confidence 
+        calculation, set the confidence logic code in KNN model is as follows:
 
                knn_model.confidenceCalculation(vector data_point) = {
                // logic for Confidence Calculation
