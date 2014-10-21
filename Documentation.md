@@ -197,10 +197,7 @@ HELPFUL FEATURES (WITH EXAMPLES IN CODE):
       
    iii. Constructs:
    
-      - Probability calculations are dependent on whether attribute is discrete or continuous. 
-      
-      - Class conditional probability calculation for discrete attributes is done in a frequentist approach by counting the 
-        number of occurrences. For continuous attributes Gaussian distribution is used.
+      - Probability calculations are dependent on whether attribute is discrete or continuous.
       
       - Custom class conditional probability is set as follows:
       
