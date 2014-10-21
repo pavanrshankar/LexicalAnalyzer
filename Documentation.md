@@ -123,15 +123,17 @@ HELPFUL FEATURES (WITH EXAMPLES IN CODE):
 
    i. Model functions:
    
-       createModel(string filename)
+      - createModel(string filename)
       
-       testResults<knn> testModel(string filename, int k_value) – testResults.error is updated
+      - testResults<knn> testModel(string filename, int k_value) – testResults.error is updated
       
-       vector<string> classify(string filename)
+      - vector<string> classify(string filename)
       
-       setDistanceParameter(double parameter) – parameter of 1 corresponds to Hamiltonian distance, 2 corresponds to                Euclidean distance and so on.
+      - setDistanceParameter(double parameter) – 
+        parameter of 1 corresponds to Hamiltonian distance, 2 corresponds to Euclidean distance and so on.
       
-       vector<string> confidenceCalculation(vector point) – vector returned contains class names in decreasing order of             confidence with respect to data point calculated by default approach. For custom confidence calculation, set the             confidence logic code in KNN model is as follows:
+      - vector<string> confidenceCalculation(vector point) – vector returned contains class names in decreasing order of
+        confidence with respect to data point calculated by default approach. For custom confidence calculation, set the             confidence logic code in KNN model is as follows:
 
                knn_model.confidenceCalculation(vector data_point) = {
                // logic for Confidence Calculation
@@ -143,7 +145,7 @@ HELPFUL FEATURES (WITH EXAMPLES IN CODE):
                
    iii. Model attributes:
    
-       Distance parameter
+      - Distance parameter
       
       Code:
       
@@ -195,7 +197,10 @@ HELPFUL FEATURES (WITH EXAMPLES IN CODE):
       
    iii. Constructs:
    
-      - Probability calculations are dependent on whether attribute is discrete or continuous. Class conditional probability         calculation for discrete attributes is done in a frequentist approach by counting the number of occurrences. For             continuous attributes Gaussian distribution is used.
+      - Probability calculations are dependent on whether attribute is discrete or continuous. 
+      
+      - Class conditional probability calculation for discrete attributes is done in a frequentist approach by counting the 
+        number of occurrences. For continuous attributes Gaussian distribution is used.
       
       - Custom class conditional probability is set as follows:
       
