@@ -1,4 +1,4 @@
-Classifyzer
+Machine Learning Domain Specific Language
 ======
 
 Lexical Analyzer for Classification algorithms 
