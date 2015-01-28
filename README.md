@@ -1,8 +1,5 @@
-Machine Learning Domain Specific Language
+Lexical Analyzer for Classification algorithms
 ======
-
-Lexical Analyzer for Classification algorithms 
-
 Note:
 > Make sure the test case files are in the same folder as the lexer.py program for convenience.
 
