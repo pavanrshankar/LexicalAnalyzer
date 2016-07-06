@@ -1,23 +1,25 @@
-APPLICATION DOMAIN:
+## APPLICATION DOMAIN
 
 > Language is specific to Classification Algorithms (Neural Networks, Naïve Bayes, Linear regression with gradient descent 
   and K Nearest neighbors)
 
-HELPFUL FEATURES (WITH EXAMPLES IN CODE):
+## HELPFUL FEATURES
 
 > ARRAY OPERATIONS: Addition, subtraction, multiplication, increment, &, | etc. operations that are supported on integers 
   will be supported on integer arrays. Such operations will be applied element wise to the arrays. For two arrays, 
   it will be applied elements with equal indexes in respective arrays but will be supported on if array sizes are equal. 
   This will be useful for data science as we need to apply many operations on matrices. 
-  E.g. //operations on arrays
+  E.g.
    
-                              int arr1[10][10], arr2[10][10];
-                              arr1[][]++; //add 1 to all elements of arr1
-                              arr2[][] – arr1[][]; /* subtract elements of arr1 from arr2 at same index */
+  '''
+  int arr1[10][10], arr2[10][10];
+  arr1[][]++; //add 1 to all elements of arr1
+  arr2[][] – arr1[][]; /* subtract elements of arr1 from arr2 at same index */
+  '''                            
                               
 > MATHEMATICAL FUNCTIONS:
     
-  a. Sigma function: This is used for summation. Syntax:
+  a. Sigma function: This is used for summation.
 
                            sigma(iterating variable, start value, end value){
                               //formula to be summed
