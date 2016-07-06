@@ -190,16 +190,19 @@ Return e^argument.
       - Custom class conditional probability is set as follows:
       
                nbc.defaultProbabilityCalculationDiscrete (vector<string> attribute, Boolean change_value)
-
-      - [‘all’] is specified for all the attributes to follow new probability calculations else specified vector of strings follow new    probability calculations.
+               /* 
+                  [‘all’] is specified for all the attributes to follow new probability calculations 
+                  else specified vector of strings follow new probability calculations
+               */   
       
                nbc.discreteProbabilityCalculation(int desirable_outcomes, int total_outcomes) = {
                //new probability estimation
                }
       
-      Consider the training data set with input fields Wind speed, Power output, Generator Winding Temperature and output field Wind Turbine status as specified in wind.txt. Unclassified data points are specified in classification.txt file. Usage of Naïve Bayes classifier is as follows:
-   
-   Code:
+               /*
+                  Consider the training data set with input fields Wind speed, Power output, Generator Winding Temperature 
+                  and output field Wind Turbine status as specified in wind.txt. Unclassified data points are specified in classification.txt file. Usage of Naïve Bayes classifier is as follows
+               */   
 
                classificationModel<naiveBayes> nbc;
                nbc.trainModel("wind.txt");
