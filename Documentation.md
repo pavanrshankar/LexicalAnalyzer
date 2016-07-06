@@ -1,7 +1,7 @@
 ## Application Domain
 
-> Language is specific to Classification Algorithms (Neural Networks, Naïve Bayes, Linear regression with gradient descent 
-  and K Nearest neighbors)
+Language is specific to Classification Algorithms (Neural Networks, Naïve Bayes, Linear regression with gradient descent 
+and K Nearest neighbors)
 
 ## Helpful Features
 
