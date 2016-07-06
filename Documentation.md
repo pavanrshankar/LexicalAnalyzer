@@ -200,8 +200,9 @@ Return e^argument.
                }
       
                /*
-                  Consider the training data set with input fields Wind speed, Power output, Generator Winding Temperature 
-                  and output field Wind Turbine status as specified in wind.txt. Unclassified data points are specified in classification.txt file. Usage of Naïve Bayes classifier is as follows
+                  Consider the training data set with input fields Wind speed, Power output, Generator 
+                  Winding Temperature and output field Wind Turbine status as specified in wind.txt. Unclassified 
+                  data points are specified in classification.txt file. Usage of Naïve Bayes classifier is as follows
                */   
 
                classificationModel<naiveBayes> nbc;
