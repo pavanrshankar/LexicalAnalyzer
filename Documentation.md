@@ -62,6 +62,7 @@ Return e^argument.
 
 ##### TrainModel, TestModel, Classify
       
+```
                            classificationModel<ANN> myNet;
                            myNet.inputLayer=‟input‟;
                            myNet.outputLayer=‟output‟;
@@ -87,6 +88,8 @@ Return e^argument.
                            vector<int> sample = {3.5, 2.47452, 0.004112, 124}
                            int result = myNet.classify(sample);
                            vector<int> irisResults = myNet.classifyFromFile("irisData.csv");
+                           
+```                          
                            
 ### Regression Using Gradient Descent
 
@@ -126,10 +129,11 @@ Return e^argument.
         calculated by default approach. For custom confidence calculation, set the confidence logic code 
         in KNN model is as follows:
 
+         ```
                            knn_model.confidenceCalculation(vector data_point) = {
                            // logic for Confidence Calculation
                            }
-               
+          ```      
    ii. for Construct:
               
                for point in km.nearestNeighbours(new_point){ //Statements }
