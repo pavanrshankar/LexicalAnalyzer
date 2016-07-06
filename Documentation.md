@@ -39,35 +39,28 @@ Return e^argument.
    
                            printf(exp(10));
                            
-> NEURAL NETWORKS:
+### Neural Networks
 
-   i. Model attributes:
+##### Model attributes
    
       - Layers vector (add layer) – can be iterated using for (shown in example)
-      
       - Learning rate
-      
       - Input layer, Output layer
 
-   ii. Layer attributes: Eg. Layers[layer name][node number]
-      
+##### Layer attributes
+   
+      - Layers[layer name][node number]
       - Node vector – can be iterated using for (shown in example)
-      
       - addNode, numNodes
-      
       - layerName - string
       
-   iii. Node attributes:   
+##### Node attributes   
    
       - Weights- dictionary {<layer name, node number> : weight, <layer name, node number> : weight}
-      
       - Step function
-      
       - Threshold
-      
-   iv. TrainModel, TestModel, Classify
-   
-      Code:
+
+##### TrainModel, TestModel, Classify
       
                            classificationModel<ANN> myNet;
                            myNet.inputLayer=‟input‟;
@@ -95,55 +88,47 @@ Return e^argument.
                            int result = myNet.classify(sample);
                            vector<int> irisResults = myNet.classifyFromFile("irisData.csv");
                            
-> REGRESSION USING GRADIENT DESCENT
+### Regression Using Gradient Descent
 
-   i. Model attributes:
+##### Model attributes
    
       - Hypothesis coefficient vector
-      
       - Cost function, Error
-      
       - X and Y vectors – the input and target vectors
-      
-      Code:
 
-               classificationModel<RGD> regression;
-               regression.hypothesis.size = 3; // hypothesis of the form a0 + a1x + a2x2
-               for dim in regression.hypothesis{
-                  dim=1; //hypothesis initialized to 1 + x + x2
-               }
-               regression.costFunction = sigma(i,1,3){ 
-                                             pow(regression.hypothesis[i]*regression.X[i]–regression.Y[i],2)
-                                          };
-               untilConverge(regression.error = 0.1){
-                  regression.trainModel("regressionTrainingData.txt");
-               }
-               testResults<RGD> testing= regression.testModel('regressionTestingData.txt');
-               print(testing);
-               vector<double> result = regression.classifyFromFile('propertyValues.csv');
-               printf('Property Value results:\n' + result);
+                           classificationModel<RGD> regression;
+                           regression.hypothesis.size = 3; // hypothesis of the form a0 + a1x + a2x2
+                           for dim in regression.hypothesis{
+                              dim=1; //hypothesis initialized to 1 + x + x2
+                           }
+                           regression.costFunction = sigma(i,1,3){ 
+                                                         pow(regression.hypothesis[i]*regression.X[i]–regression.Y[i],2)
+                                                      };
+                           untilConverge(regression.error = 0.1){
+                              regression.trainModel("regressionTrainingData.txt");
+                           }
+                           testResults<RGD> testing= regression.testModel('regressionTestingData.txt');
+                           print(testing);
+                           vector<double> result = regression.classifyFromFile('propertyValues.csv');
+                           printf('Property Value results:\n' + result);
 
-> KNN
+### KNN
 
-   i. Model functions:
+##### Model functions
    
       - createModel(string filename)
-      
       - testResults<knn> testModel(string filename, int k_value) – testResults.error is updated
-      
       - vector<string> classify(string filename)
-      
-      - setDistanceParameter(double parameter) – 
-        parameter of 1 corresponds to Hamiltonian distance, 2 corresponds to Euclidean distance and so on.
-      
+      - setDistanceParameter(double parameter) – parameter of 1 corresponds to Hamiltonian distance, 2 corresponds to 
+        Euclidean distance and so on
       - vector<string> confidenceCalculation(vector point) – 
         vector returned contains class names in decreasing order of confidence with respect to data point 
         calculated by default approach. For custom confidence calculation, set the confidence logic code 
         in KNN model is as follows:
 
-               knn_model.confidenceCalculation(vector data_point) = {
-               // logic for Confidence Calculation
-               }
+                           knn_model.confidenceCalculation(vector data_point) = {
+                           // logic for Confidence Calculation
+                           }
                
    ii. for Construct:
               
