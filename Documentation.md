@@ -1,3 +1,8 @@
+## Objective
+
+To design domain specific langauge for Classification algorithms and implementing a lexical analyzer for it.
+Language designed below specifies constructs, operations and operators required for classification. 
+
 ## Application Domain
 
 Language is specific to Classification Algorithms (Neural Networks, Naïve Bayes, Linear regression with gradient descent 
