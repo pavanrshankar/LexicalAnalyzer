@@ -5,35 +5,37 @@ and K Nearest neighbors)
 
 ## Helpful Features
 
-> ARRAY OPERATIONS: Addition, subtraction, multiplication, increment, &, | etc. operations that are supported on integers 
-  will be supported on integer arrays. Such operations will be applied element wise to the arrays. For two arrays, 
-  it will be applied elements with equal indexes in respective arrays but will be supported on if array sizes are equal. 
-  This will be useful for data science as we need to apply many operations on matrices. 
-  E.g.
+### Array Operations
+
+Addition, subtraction, multiplication, increment, &, | etc. operations that are supported on integers 
+will be supported on integer arrays. Such operations will be applied element wise to the arrays. For two arrays, 
+it will be applied elements with equal indexes in respective arrays but will be supported on if array sizes are equal. 
+This will be useful for data science as we need to apply many operations on matrices.
    
-  ```
-  int arr1[10][10], arr2[10][10];
-  arr1[][]++; //add 1 to all elements of arr1
-  arr2[][] – arr1[][]; /* subtract elements of arr1 from arr2 at same index */
-  ```                            
+                          int arr1[10][10], arr2[10][10];
+                          arr1[][]++; //add 1 to all elements of arr1
+                          arr2[][] – arr1[][]; /* subtract elements of arr1 from arr2 at same index */
                               
-> MATHEMATICAL FUNCTIONS:
+### Mathematical Functions
     
-  a. Sigma function: This is used for summation.
+##### Sigma function
+This is used for summation.
 
                            sigma(iterating variable, start value, end value){
                               //formula to be summed
                               heights[iterating variable];
                            }
                            
-   b. Sigmoid function: This function accepts a variable and return sigmoidal value
+##### Sigmoid function
+This function accepts a variable and return sigmoidal value
       
                            vector<int> sigmoid_values;
                            for i in range (1,10){
                               sigmoid_values.insert(4*sigmoid(i) +1);
                            }
                            
-   c. Exponent function: Return e^argument.
+##### Exponent function
+Return e^argument.
    
                            printf(exp(10));
                            
