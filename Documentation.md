@@ -129,21 +129,17 @@ Return e^argument.
         calculated by default approach. For custom confidence calculation, set the confidence logic code 
         in KNN model is as follows:
 
-         ```
                            knn_model.confidenceCalculation(vector data_point) = {
                            // logic for Confidence Calculation
                            }
-          ```      
-   ii. for Construct:
+##### for Construct
               
-               for point in km.nearestNeighbours(new_point){ //Statements }
-               
-   iii. Model attributes:
+                           for point in km.nearestNeighbours(new_point){ //Statements }
+
+##### Model attributes
    
       - Distance parameter
-      
-      Code:
-      
+
                classificationModel<KNN> knn;
                knn.createModel('iris.txt');
                knn.setDistanceParameter(3);
@@ -176,35 +172,32 @@ Return e^argument.
                   }
                }
                
-> NAÏVE BAYES
+### Naive Bayes
 
-   i. Model Attributes:
+##### Model Attributes
    
       - priorProbabilities – dictionary containing classname as key and prior Probabilities as value
       
-   ii. Model Functions:
+##### Model Functions
    
       - trainModel(string filename, vector<string> classnames)
-         
-      -  testResults<naiveBayes> testModel(filename) - testResults.error updated.
-      
+      - testResults<naiveBayes> testModel(filename) - testResults.error updated.
       - vector<string> classify(filename)
       
-   iii. Constructs:
+##### Constructs
    
       - Probability calculations are dependent on whether attribute is discrete or continuous.
-      
       - Custom class conditional probability is set as follows:
       
                nbc.defaultProbabilityCalculationDiscrete (vector<string> attribute, Boolean change_value)
 
-   [‘all’] is specified for all the attributes to follow new probability calculations else specified vector of strings          follow new probability calculations.
+      - [‘all’] is specified for all the attributes to follow new probability calculations else specified vector of strings follow new    probability calculations.
       
                nbc.discreteProbabilityCalculation(int desirable_outcomes, int total_outcomes) = {
                //new probability estimation
                }
       
-   Consider the training data set with input fields Wind speed, Power output, Generator Winding Temperature and output          field Wind Turbine status as specified in wind.txt. Unclassified data points are specified in classification.txt file.       Usage of Naïve Bayes classifier is as follows:
+      Consider the training data set with input fields Wind speed, Power output, Generator Winding Temperature and output field Wind Turbine status as specified in wind.txt. Unclassified data points are specified in classification.txt file. Usage of Naïve Bayes classifier is as follows:
    
    Code:
 
@@ -219,8 +212,9 @@ Return e^argument.
                result = nbc.classify(„testing.txt‟);
                printf(“Class of result is: ”+result);
                
-> NON-BLOCKING ASSIGNMENTS & ASSIGNMENT BLOCKS: Non-blocking assignment like the ‘<=’ in Verilog can be helpful for
-  simultaneous update of multiple items without regard to order or dependence upon on each other. Once example of where it     will be useful is when we update parameters of cost-function using gradient descent.
+### Non-Blocking Assignments and Assignment Blocks
+
+Non-blocking assignment like the ‘<=’ in Verilog can be helpful for simultaneous update of multiple items without regard to order or dependence upon on each other. Once example of where it will be useful is when we update parameters of cost-function using gradient descent.
 
                //Non-blocking assignment
                a := b;
@@ -233,27 +227,24 @@ Return e^argument.
                j[3] = j[3] – diff(j[],3);
                }//all four updates happen in a non-blocking manner
                
-> dataContainer data type: This is a data type that will act as a container for data used for data science tasks. It is  
-  similar to how C++ defines containers like Vector, Stack and Queue of types int, char etc. e. g. Vector<int> or    
-  Stack<char>. The types accepted by the data container will be image, csv, xls. Type image will allow pixel by pixel  
-  traversal, useful for image processing purposes. Type csv and xls can be used for reading in data from csv and excel 
-  files and used for traversing through data points, used for getting field names and manipulating data at a lower level.
+##### dataContainer data type
+
+This is a data type that will act as a container for data used for data science tasks. It is  similar to how C++ defines containers like Vector, Stack and Queue of types int, char etc. e. g. Vector<int> or Stack<char>. The types accepted by the data container will be image, csv, xls. Type image will allow pixel by pixel traversal, useful for image processing purposes. Type csv and xls can be used for reading in data from csv and excel files and used for traversing through data points, used for getting field names and manipulating data at a lower level.
 
                //creating a data container of image type
                dataContainer<image> img= loadImage(“~/pictures/iris.jpg”);
                
-> DATABASE FUNCTIONS: Connection to database can be established easily and queries run on it directly with simple syntax.  
-  Currently, with the rise of big data, there is increasing need for running machine learning and AI algorithms on data   
-  easily selected through joins/views from an efficient database system. This feature will decrease hassle of any 
-  programmer trying to work with both data from a database and ML algorithms.
+##### Database Functions 
+
+Connection to database can be established easily and queries run on it directly with simple syntax. Currently, with the rise of big data, there is increasing need for running machine learning and AI algorithms on data easily selected through joins/views from an efficient database system. This feature will decrease hassle of any programmer trying to work with both data from a database and ML algorithms.
 
                //creating a database variable with connection details
                database db = connect(“user_name”,”sales_db”,”localhost”);
                int max = db(“select max(sales) from shoe_sales”);
 
-> HTTP REQUESTS: Using get, put, post and delete HTTP requests, we can easily interact with data on servers. Very useful 
-  for interacting with cloud based data storage services. This removes the limitation of a data science programmer to 
-  interact and work with data on a local machine.
+##### HTTP Requests
+
+Using get, put, post and delete HTTP requests, we can easily interact with data on servers. Very useful for interacting with cloud based data storage services. This removes the limitation of a data science programmer to interact and work with data on a local machine.
 
                put(“http::/server/script/resources?query”);
 
