@@ -101,8 +101,8 @@ Return e^argument.
       - X and Y vectors – the input and target vectors
 
                            classificationModel<RGD> regression;
-                           regression.hypothesis.size = 3; // hypothesis of the form a0 + a1x + a2x2
-                           regression.costFunction = sigma(i,1,regression.hypothesis.size){ 
+                           regression.hypothesissize = 3; // hypothesis of the form a0 + a1x + a2x2
+                           regression.costFunction = sigma(i,1,regression.hypothesissize){ 
                                                          pow(regression.X[i]–regression.Y[i],2)
                                                      };
                            untilConverge(regression.error = 0.1){
