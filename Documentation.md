@@ -25,18 +25,21 @@ This will be useful for data science as we need to apply many operations on matr
     
 ##### Sigma function
 This is used for summation.
+
                            sigma(iterating variable, start value, end value){
                               //formula that has to be summed
                            }
                            
 ##### Sigmoid function
 This function accepts a variable and return sigmoidal value
+
                            double sigmoid(value){
-                              return 1/(exponent(-value) +1);
+                              return 1/(exponent(-value)+1);
                            }
                            
 ##### Exponent function
 Return e^argument.
+
                            double exponent(argument){
                               return math.exp(argument)
                            }
