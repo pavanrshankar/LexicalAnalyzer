@@ -25,29 +25,25 @@ This will be useful for data science as we need to apply many operations on matr
     
 ##### Sigma function
 This is used for summation.
-
                            sigma(iterating variable, start value, end value){
-                              //formula to be summed
-                              heights[iterating variable];
+                              //formula that has to be summed
                            }
                            
 ##### Sigmoid function
 This function accepts a variable and return sigmoidal value
-      
-                           vector<int> sigmoid_values;
-                           for i in range (1,10){
-                              sigmoid_values.insert(4*sigmoid(i) +1);
+                           double sigmoid(value){
+                              return 1/(exponent(-value) +1);
                            }
                            
 ##### Exponent function
 Return e^argument.
-   
-                           printf(exp(10));
+                           double exponent(argument){
+                              return math.exp(argument)
+                           }
                            
 ### Neural Networks
 
 ##### Model attributes
-   
       - Layers vector (add layer) – can be iterated using for (shown in example)
       - Learning rate
       - Input layer, Output layer
@@ -106,12 +102,9 @@ Return e^argument.
 
                            classificationModel<RGD> regression;
                            regression.hypothesis.size = 3; // hypothesis of the form a0 + a1x + a2x2
-                           for dim in regression.hypothesis{
-                              dim=1; //hypothesis initialized to 1 + x + x2
-                           }
-                           regression.costFunction = sigma(i,1,3){ 
+                           regression.costFunction = sigma(i,1,regression.hypothesis.size){ 
                                                          pow(regression.hypothesis[i]*regression.X[i]–regression.Y[i],2)
-                                                      };
+                                                     };
                            untilConverge(regression.error = 0.1){
                               regression.trainModel("regressionTrainingData.txt");
                            }
@@ -135,7 +128,7 @@ Return e^argument.
         in KNN model is as follows:
 
                            knn_model.confidenceCalculation(vector data_point) = {
-                           // logic for Confidence Calculation
+                              //logic for Confidence Calculation
                            }
 ##### for Construct
               
